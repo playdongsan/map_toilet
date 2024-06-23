@@ -16,17 +16,20 @@
             margin-bottom: 20px;
         }
         #map {
-            height: 60vh;
+            height: 80vh;
             width: 100%;
         }
         #password-list {
-            max-height: 40vh;
+            max-height: 60vh;
             overflow-y: auto;
             margin-bottom: 20px;
         }
         @media (max-width: 768px) {
             #map {
-                height: 50vh;
+                height: 70vh;
+            }
+            #password-list {
+                max-height: 30vh;
             }
         }
     </style>
@@ -36,7 +39,7 @@
         <div id="map-title">{{ title }}</div>
         <div id="map-subtitle">{{ subtitle }}</div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div id="password-list" class="list-group">
                     <ul class="list-group">
                         {% for building in buildings %}
@@ -49,7 +52,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div id="map">{{ map_html|safe }}</div>
             </div>
         </div>
