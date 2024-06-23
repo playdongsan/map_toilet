@@ -1,0 +1,20 @@
+# data.py
+buildings = [
+    {"name": "청라초컴포즈 커피", "location": [37.53688574720172, 126.65626228277267], "male_password": "1122", "female_password": "12345"},
+    {"name": "호반 2차 상가 지하 1층", "location": [37.537267713071785, 126.65670745358182], "male_password": "2345", "female_password": "2345"},
+    {"name": "지젤엠 지하 1층", "location": [37.533606826043986, 126.65573143287057], "male_password": "2623*", "female_password": "2623*"},
+    {"name": "지젤엠 1층 (롯데리아)", "location": [37.533606826043986, 126.65573143287057], "male_password": "#2623", "female_password": "#3623"},
+    {"name": "청라 역전할맥 지하 1층", "location": [37.53327, 126.6529], "male_password": "6010*", "female_password": "6010*"},
+    {"name": "세븐스타 코인노래방 1층", "location": [37.53337, 126.6520], "male_password": "2404*", "female_password": "2404*"},
+    {"name": "버거킹 1층", "location": [37.53399600276049, 126.65019425007179], "male_password": "7520*", "female_password": "7520*"},
+    {"name": "쓰리엠타워 1층(고향옥, 백채김치찌개, 청년다방)", "location": [37.53218, 126.6508], "male_password": "1004*", "female_password": "1010*"},
+    {"name": "엑슬루타워 홍콩반점 상가", "location": [37.53156457596653, 126.65062138340869], "male_password": "*0405*", "female_password": "*0405*"},
+    {"name": "엑슬루타워 국민은행", "location": [37.53160, 126.6502], "male_password": "0910*", "female_password": "0910*"},
+    {"name": "서브웨이 건물", "location": [37.53348, 126.6529], "male_password": "6010*", "female_password": "6010*"},
+    {"name": "종로서적", "location": [37.53201, 126.6554], "male_password": "1980*", "female_password": "1980*"},
+    {"name": "청라통큰삼겹살 지하 1층 화장실 (제로백 PC 건물)", "location": [37.53202, 126.6509], "male_password": "1122", "female_password": "1122"},
+    {"name": "청라초 청라중 사이 개구리놀이터", "location": [37.53770, 126.6549], "male_password": "없음", "female_password": "없음"},
+    {"name": "청라매그놀리아 3층 (금별맥주)", "location": [37.53269, 126.6512], "male_password": "없음", "female_password": "없음"},
+    {"name": "수작 지하 1층", "location": [37.53340, 126.6520], "male_password": "없음", "female_password": "없음"},
+    {"name": "엑슬루 새마을식당", "location": [37.53163, 126.6511], "male_password": "0607*", "female_password": "0607*"},
+]

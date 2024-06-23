@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <!-- Bootstrap CSS 추가 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #map-title {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 24px;  /* 제목 글씨 크기 설정 */
+        }
+        #map-subtitle {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        #map {
+            height: 60vh;
+            width: 100%;
+        }
+        #password-list {
+            max-height: 40vh;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            #map {
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="map-title">{{ title }}</div>
+        <div id="map-subtitle">{{ subtitle }}</div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="password-list" class="list-group">
+                    <ul class="list-group">
+                        {% for building in buildings %}
+                            <li class="list-group-item">
+                                <strong>{{ building.name }}</strong><br>
+                                남자 화장실 비밀번호: {{ building.male_password }}<br>
+                                여자 화장실 비밀번호: {{ building.female_password }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="map">{{ map_html|safe }}</div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS 및 의존성 추가 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
