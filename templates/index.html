@@ -26,11 +26,13 @@
         }
         #map-container {
             height: 100%;
+            position: relative;
         }
-        #password-list {
-            max-height: 60vh;
-            overflow-y: auto;
-            margin-bottom: 20px;
+        #password-list-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
         }
         .popup-content {
             font-size: 18px;  /* 팝업 글씨 크기 설정 */
@@ -53,7 +55,7 @@
             <div class="col-12" id="map-container">
                 <div id="map">{{ map_html|safe }}</div>
                 <!-- 리스트를 여는 버튼 -->
-                <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#passwordListModal">
+                <button id="password-list-btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#passwordListModal">
                     화장실 비밀번호 리스트 열기
                 </button>
             </div>

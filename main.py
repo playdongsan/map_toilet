@@ -8,8 +8,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # 지도 중심의 위도와 경도를 설정합니다.
-    latitude = 37.53530388483148
-    longitude = 126.64689286992314
+    latitude = 37.53274
+    longitude = 126.6537
 
     # 지도를 생성합니다. 줌 컨트롤을 비활성화하고, 최대 줌 레벨과 최소 줌 레벨을 설정합니다.
     mymap = folium.Map(location=[latitude, longitude], zoom_start=17, max_zoom=18, min_zoom=15, zoom_control=True)
