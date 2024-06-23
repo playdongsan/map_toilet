@@ -37,9 +37,10 @@ def index():
     for loc, buildings_at_loc in combined_buildings.items():
         popup_texts = [f"{b['name']}<br>남자 화장실 비밀번호: {b['male_password']}<br>여자 화장실 비밀번호: {b['female_password']}" for b in buildings_at_loc]
         popup_text = "<br><br>".join(popup_texts)
+        popup_html = f'<div class="popup-content">{popup_text}</div>'
         folium.Marker(
             location=list(loc),
-            popup=folium.Popup(popup_text, max_width=300)
+            popup=folium.Popup(popup_html, max_width=300)
         ).add_to(mymap)
 
     # 지도를 HTML 문자열로 저장합니다.

@@ -5,23 +5,42 @@
     <!-- Bootstrap CSS 추가 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
         #map-title {
-            margin-top: 20px;
             text-align: center;
-            font-size: 24px;  /* 제목 글씨 크기 설정 */
+            font-size: 24px;
+            margin: 10px 0;  /* 제목 글씨 크기 설정 */
         }
         #map-subtitle {
             text-align: center;
             font-size: 18px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         #map {
-            height: 90vh;
+            height: 80vh;
             width: 100%;
+        }
+        #map-container {
+            height: 100%;
+        }
+        #password-list {
+            max-height: 60vh;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+        .popup-content {
+            font-size: 18px;  /* 팝업 글씨 크기 설정 */
         }
         @media (max-width: 768px) {
             #map {
-                height: 80vh;
+                height: 90vh;
+            }
+            .popup-content {
+                font-size: 16px;  /* 모바일 팝업 글씨 크기 설정 */
             }
         }
     </style>
@@ -31,7 +50,7 @@
         <div id="map-title">{{ title }}</div>
         <div id="map-subtitle">{{ subtitle }}</div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-12" id="map-container">
                 <div id="map">{{ map_html|safe }}</div>
                 <!-- 리스트를 여는 버튼 -->
                 <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#passwordListModal">
